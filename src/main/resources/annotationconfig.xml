@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+
+
+	<context:annotation-config/> 
+	<!-- <context:component-scan base-package="com.prowing.XmlanAnotation"/> -->
+	
+<!-- 	<bean id="car1" class="com.prowing.XmlanAnotation.Car"  c:_0="77" c:_1="BMW" c:_2-ref="engine" />
+	<bean id="eng" class="com.prowing.XmlanAnotation.Engine" p:id="22" p:type="engine"/>
+	 -->
+	 
+	 <bean id="car" class="com.prowing.XmlanAnotation.Car" >
+	 	<property name="id" value="77"/>
+	 	<property name="name" value="BMW"/>
+	 	
+	 	<!-- <property name="engine" ref="engine"/> -->
+	 </bean>
+	 
+	 <bean id="engine" class="com.prowing.XmlanAnotation.Engine">
+	 	<property name="id" value="44"/>
+	 	<property name="type" value="motorSport"/>
+	 	
+	 
+	 
+	 </bean>
+</beans>
